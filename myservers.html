@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color Boxes</title>
+    <style>
+        table {
+            border-collapse: collapse;
+        }
+
+        td {
+            width: 30px;
+            height: 30px;
+            border: 1px solid #000;
+            text-align: center;
+        }
+
+        .color_red {
+            background-color: red;
+        }
+
+        .color_yellow {
+            background-color: yellow;
+        }
+
+        .color_green {
+            background-color: green;
+        }
+    </style>
+</head>
+<body>
+
+<button onclick="showPercentage()">Show Percentage</button>
+<table>
+    <tr>
+        <td class="color_red"></td>
+        <td class="color_yellow"></td>
+        <td class="color_green"></td>
+              <td class="color_green"></td>
+              <td class="color_green"></td>
+              <td class="color_green"></td>
+              <td class="color_green"></td>
+              <td class="color_green"></td>
+              <td class="color_green"></td>
+              <td class="color_green"></td>
+              <td class="color_green"></td>
+              <td class="color_green"></td>
+              <td class="color_green"></td>
+              <td class="color_green"></td>
+              <td class="color_green"></td>
+              <td class="color_green"></td>
+    </tr>
+</table>
+
+<script>
+    function showPercentage() {
+        var boxes = document.querySelectorAll('td');
+        var totalBoxes = boxes.length;
+        var redCount = document.querySelectorAll('.color_red').length;
+        var yellowCount = document.querySelectorAll('.color_yellow').length;
+        var greenCount = document.querySelectorAll('.color_green').length;
+
+        var redPercentage = (redCount / totalBoxes) * 100;
+        var yellowPercentage = (yellowCount / totalBoxes) * 100;
+        var greenPercentage = (greenCount / totalBoxes) * 100;
+
+        alert(`Red: ${redPercentage.toFixed(2)}%\nYellow: ${yellowPercentage.toFixed(2)}%\nGreen: ${greenPercentage.toFixed(2)}%`);
+    }
+</script>
+
+</body>
+</html>
